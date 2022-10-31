@@ -15,7 +15,7 @@ class NormalOpMode : LinearOpMode() {
     val deadZone = 0.2
     var extState = false
     var pow: Double = 0.9
-//    private var bot: AutoInstance? = null
+    //    private var bot: AutoInstance? = null
     override fun runOpMode() {
         val bot = TeleInstance(this, hardwareMap, telemetry)
         telemetry.addData(">", "Ready")
@@ -44,11 +44,9 @@ class NormalOpMode : LinearOpMode() {
             bot.forward(-pow)
         } else if ((abs(y) < abs(x) && x < -deadZone)) {
             bot.turn(-pow)
-        }
-        else if (abs(y) < abs(x) && x > deadZone) {
+        } else if (abs(y) < abs(x) && x > deadZone) {
             bot.turn(pow)
-        }
-        else {
+        } else {
             bot.forward(0.0)
         }
 

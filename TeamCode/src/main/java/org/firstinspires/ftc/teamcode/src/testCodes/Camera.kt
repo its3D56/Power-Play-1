@@ -10,7 +10,8 @@ import org.firstinspires.ftc.teamcode.src.models.ABot.CamInstance
 
 
 @Autonomous(name = "Camera", group = "AutoTest")
-class Camera: LinearOpMode() {
+class Camera: LinearO
+pMode() {
     lateinit var vuforiaPowerPlay: VuforiaCurrentGame
     lateinit var bot: CamInstance
     val cam = Cam(this)
@@ -57,6 +58,5 @@ class Camera: LinearOpMode() {
             0f,  // zAngle
             true
         ) // useCompetitionFieldTargetLocations
-
     }
 }
